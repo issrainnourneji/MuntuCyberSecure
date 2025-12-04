@@ -1,0 +1,200 @@
+/* ===========================
+   SECTION COMING SOON
+=========================== */
+.coming-wrapper {
+  position: relative;
+  height: 100vh;
+  width: 100%;
+  color: #fff;
+  font-family: "Poppins", sans-serif;
+  overflow: hidden;
+
+  background: url('../../../assets/images/news/Image\ Site.png')
+  center/cover no-repeat;
+}
+
+/* Particles */
+#particles-js {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+}
+
+/* Overlay */
+.dark-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(255, 255, 255, 0.418);
+  backdrop-filter: blur(2px);
+  z-index: 1;
+}
+
+/* Content wrapper */
+.content-wrapper {
+  position: relative;
+  z-index: 2;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  padding: 40px;
+}
+
+/* ========== LOGO ========== */
+.brand {
+  position: absolute;
+  top: 20px;
+  left: 35px;
+}
+
+.brand-logo {
+  width: 150px;
+}
+
+/* ========== TEXTE ========== */
+.hero-text {
+  margin-top: 12%;
+  margin-bottom: auto;
+  max-width: 650px;
+  animation: fadeSlideIn 1.5s ease-out;
+}
+
+.title {
+  font-size: 3.5rem;
+  font-weight: 800;
+  color: #7b0f18;
+  margin-bottom: 15px;
+  text-shadow: 0px 0px 18px rgba(255,255,255,0.4);
+
+}
+
+.subtitle {
+  font-size: 1.4rem;
+  color: #333;
+  margin-bottom: 10px;
+  font-weight: 500;
+    animation: brandGlow 2s ease-in-out infinite alternate;
+
+}
+
+.description {
+  font-size: 1.1rem;
+  line-height: 1.7;
+  color: #0c0c0c;
+  opacity: 0.9;
+  width: 90%;
+}
+
+/* ========== FOOTER CONTACT ========== */
+.footer-info {
+  margin-top: auto;
+  text-align: left;
+  font-size: 0.85rem;
+}
+
+.social-links {
+  display: flex;
+  gap: 15px;
+  margin-top: 10px;
+}
+
+.social-links a {
+  color: #333;
+  font-size: 1.5rem;
+  transition: 0.3s ease;
+}
+
+.social-links a:hover {
+  transform: scale(1.25);
+  color: #7b0f18;
+}
+
+.contact-link {
+  color: #333; /* Blanc par défaut */
+  text-decoration: none;
+  cursor: pointer; /* Curseur main */
+  transition: color 0.3s ease; /* Animation fluide */
+  font-weight: 500;
+}
+.contact-link:hover {
+  color: #7b0f18 ;
+}
+
+/* ========== ANIMATIONS PRO ========== */
+@keyframes brandGlow {
+  0% { filter: drop-shadow(0px 0px 0px #6d6566); }
+  100% { filter: drop-shadow(0px 0px 10px #c41e37); }
+}
+
+@keyframes fadeSlideIn {
+  from { opacity: 0; transform: translateY(40px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* ========== RESPONSIVE ========== */
+
+@media (max-width: 992px) {
+  .title { font-size: 2.8rem; }
+  .brand-logo { width: 170px; }
+  .hero-text {margin-top: 50%;}
+}
+
+@media (max-width: 768px) {
+  .title { font-size: 2.3rem; }
+  .subtitle { font-size: 1.2rem; }
+  .description { font-size: 1rem; }
+  .brand-logo { width: 170px; }
+  .content-wrapper { padding: 25px; }
+}
+
+@media (max-width: 480px) {
+  .title { font-size: 1.9rem; }
+  .subtitle { font-size: 1rem; }
+  .brand-logo { width: 170px; }
+}
+/* ===== FOOTER CONTACT — SANS RETOUR À LA LIGNE ===== */
+.footer-info {
+  margin-top: 83px;
+  width: 100%;
+  padding-top: 40px;
+}
+
+.info-row {
+  display: flex;
+  justify-content: left;       /* Centre la ligne */
+  align-items: center;
+  gap: 40px;                     /* Espace entre les 3 items */
+  white-space: nowrap;           /* 🔥 Empêche les retours à la ligne */
+  overflow: hidden;
+}
+
+/* Chaque élément */
+.info-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  white-space: nowrap;           /* Toujours en ligne */
+}
+
+/* Icônes */
+.info-item i {
+  font-size: 1.2rem;
+  color: #7b0f18;
+}
+
+/* Texte */
+.info-item p {
+  margin: 0;
+  font-size: 1rem;
+  color: #0c0c0c;
+}
+/* ===== Responsive ===== */
+@media (max-width: 768px) {
+  .info-row {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .info-item {
+    justify-content: center;
+  }
+}

@@ -1,0 +1,196 @@
+.sectionp{
+  padding-top: 230px;
+  padding-left: 150px; /* espace à gauche */
+  padding-right: 150px; /* espace à droite */
+}
+.sectionpp{
+  padding-left: 150px; /* espace à gauche */
+  padding-right: 150px; /* espace à droite */
+}
+/* SECTION HERO */
+.hero-section {
+  background-image: url('../../../assets/images/news/istockphoto-901359622-612x612.jpg');
+  background-size: cover;
+  background-position: center;
+  height: 90vh;
+  position: relative;
+}
+
+/* LAYER SOMBRE */
+.hero-section::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.45);
+  z-index: 1;
+}
+
+/* BOX QUI DÉMARRE AU MILIEU DE L’IMAGE */
+.content-box {
+  position: relative;
+  top: 70%;               /* commence au milieu */
+  left: 50%;
+  transform: translate(-50%, -25%); /* dépasse légèrement vers le bas */
+  z-index: 2;
+
+  background: #f5f5f5;
+  padding: 50px 50px;
+  border-radius: 5px;
+  max-width: 750px;
+  box-shadow: 0 4px 25px rgba(0,0,0,0.15);
+}
+
+/* TITLE */
+.hero-title {
+  font-size: 2.2rem;
+  font-weight: 500;
+  line-height: 1.4;
+  color: #111;
+}
+.colored-line {
+  margin-top: 15px;
+  height: 3px;
+  width: 100px;
+  background-color: #7b0f18;
+  margin-left: 60px;
+}
+
+.hero-subtext {
+  font-size: 1.1rem;
+  color: #444;
+}
+
+.paragraph-text {
+  width: 600px;  /* Empêche le texte de passer sous la ligne */
+}
+
+/* BOUTON BORDEAUX */
+.btn-bordeaux {
+  background-color: #7b0f18;
+  color: white;
+  border-radius: 8px;
+  transition: 0.2s;
+}
+
+.btn-bordeaux:hover {
+  background-color: #be323d;
+}
+.contact-link {
+  color: #ffffff; /* Blanc par défaut */
+  text-decoration: none;
+  cursor: pointer; /* Curseur main */
+  transition: color 0.3s ease; /* Animation fluide */
+  font-weight: 500;
+}
+
+.contact-link:hover {
+  color: #be323d ;
+}
+.primary-menu .current > .contact-link {
+  color: #be323d ; /* Rosé toujours visible */
+  font-weight: 600;
+}
+
+
+/* Cards */
+.card {
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+      background: #f5f5f5;
+
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 25px rgba(0,0,0,0.15);
+}
+
+/* Card body pour aligner le bouton en bas */
+.card-body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: center;
+    flex-grow: 1;
+}
+
+
+.card-text {
+    color: #6c757d; /* gris clair */
+    flex-grow: 1;
+
+}
+
+
+@media (max-width: 768px) {
+    .sectionp {
+        padding-top: 300px;
+    }
+
+}
+
+
+/* Cartes prennent toute la hauteur */
+.card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%; /* prend toute la hauteur de la colonne */
+}
+.card-title {
+    position: relative;
+    min-height: 50px; /* ajuste selon la taille maximale de ton plus long titre */
+}
+.card-text::before {
+    content: "";
+    display: block;
+    width: 50%;
+    height: 3px;
+    margin: 8px auto 0;
+    border-radius: 2px;
+    background: #be323d;
+    margin-bottom: 35px;
+
+}
+@media (max-width: 768px) {
+    .card-title {
+        min-height: auto; /* titres plus petits sur mobile */
+    }
+}
+/* SECTION AVEC LA BOX SEULE */
+.content-section {
+  padding: 120px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #fff; /* couleur neutre */
+}
+
+/* On reprend la même box mais adaptée pour section normale */
+.clone-box {
+  position: static;            /* désactive top/left */
+  transform: none;             /* enlève le déplacement */
+  margin: auto;                /* centre naturellement */
+}
+/* MAP */
+.map-responsive {
+  position: relative;
+  width: 100%;
+  padding-bottom: 56.25%; /* ratio 16:9 */
+  height: 0;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+.map-responsive iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}

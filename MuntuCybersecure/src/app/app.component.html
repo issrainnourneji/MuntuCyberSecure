@@ -1,0 +1,5 @@
+<app-coming-soon *ngIf="isComingSoon; else appContent"></app-coming-soon>
+
+<ng-template #appContent>
+  <router-outlet></router-outlet>
+</ng-template>

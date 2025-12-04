@@ -1,0 +1,8 @@
+.contact-link {
+  color: #ffffff; /* Blanc par défaut */
+  text-decoration: none;
+  cursor: pointer; /* Curseur main */
+  transition: color 0.3s ease; /* Animation fluide */
+  font-weight: 500;
+}
+

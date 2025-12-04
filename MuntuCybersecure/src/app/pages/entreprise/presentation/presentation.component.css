@@ -1,0 +1,179 @@
+
+/* BOUTON BORDEAUX */
+.btn-bordeaux {
+  background-color: #7b0f18;
+  color: white;
+  border-radius: 8px;
+  transition: 0.2s;
+}
+
+.btn-bordeaux:hover {
+  background-color: #be323d;
+}
+.contact-link {
+  color: #ffffff; /* Blanc par défaut */
+  text-decoration: none;
+  cursor: pointer; /* Curseur main */
+  transition: color 0.3s ease; /* Animation fluide */
+  font-weight: 500;
+}
+
+.contact-link:hover {
+  color: #be323d ;
+}
+.primary-menu .current > .contact-link {
+  color: #be323d ; /* Rosé toujours visible */
+  font-weight: 600;
+}
+
+/* SECTION HERO */
+.hero-section {
+  background-image: url('../../../../assets/images/news/istockphoto-901359622-612x612.jpg');
+  background-size: cover;
+  background-position: center;
+  height: 75vh;
+  position: relative;
+}
+
+/* LAYER SOMBRE */
+.hero-section::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.45);
+  z-index: 1;
+}
+
+.title-wrapper {
+  position: relative;
+  width: fit-content;
+  margin: 0 auto;
+  top: 60%; /* déplace la box vers le bas, ajuste selon besoin */
+  z-index: 2;
+}
+
+
+/* BOX DE FOND (BORDEAUX / VERT FONCÉ) */
+.title-background {
+  background: #7b0f18; /* remplace par bordeaux : #7a1f33 */
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  bottom: -20px;   /* décalage vers le bas */
+  right: -25px;    /* décalage à droite */
+  border-radius: 4px;
+  z-index: 1;
+}
+
+/* BOX GRIS */
+.title-box {
+  background: #f2f2f2;
+  padding: 65px 50px;
+  border-radius: 4px;
+  position: relative;
+  z-index: 2;
+  max-width: 750px;
+  box-shadow: 0 4px 25px rgba(0, 0, 0, 0.15);
+
+}
+
+/* TITRE */
+.hero-title {
+  font-size: 3rem;
+  color: #111;
+  margin-bottom: 20px;
+}
+
+/* LIGNE SOUS LE TITRE */
+.title-line {
+  width: 250px;
+  height: 2.5px;
+  background: #7b0f18; /* bordeaux : #7a1f33 */
+}
+.sectionp{
+  padding-top: 140px;
+}
+
+/* Cards */
+.card {
+    border-radius: 20px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+      background: #f5f5f5;
+    padding: 20px;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 25px rgba(0,0,0,0.15);
+}
+
+/* Card body pour aligner le bouton en bas */
+.card-body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: center;
+    flex-grow: 1;
+}
+
+
+.card-text {
+    color: #6c757d; /* gris clair */
+    flex-grow: 1;
+
+}
+
+
+@media (max-width: 768px) {
+    .sectionp {
+        padding-top: 300px;
+    }
+
+}
+
+
+/* Cartes prennent toute la hauteur */
+.card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%; /* prend toute la hauteur de la colonne */
+
+}
+.card-title {
+    position: relative;
+}
+.card-text::before {
+    content: "";
+    display: block;
+    width: 85%;
+    height: 2%;
+    margin: 8px auto 0;
+    border-radius: 2px;
+    background: #be323d;
+    margin-bottom: 30px;
+
+}
+@media (max-width: 768px) {
+    .card-title {
+        min-height: auto; /* titres plus petits sur mobile */
+    }
+}
+.section-space{
+padding-left: 200px; /* espace à gauche */
+  padding-right: 200px;
+}
+.titlep {
+  display: flex;
+  align-items: center;
+  gap: 8px; /* espace entre les h2 */
+  margin-bottom: 10px;
+
+}
+
+.titlep .red {
+  color: #7b0f18;
+}
