@@ -17,6 +17,11 @@ import { ExpertiseComponent } from './pages/solutions/expertise/expertise.compon
 import { TarifsComponent } from './pages/solutions/tarifs/tarifs.component';
 import { PartenairesComponent } from './pages/entreprise/partenaires/partenaires.component';
 import { RefCertifComponent } from './pages/entreprise/ref-certif/ref-certif.component';
+import { ClientsComponent } from './pages/temoignages/clients/clients.component';
+import { TemoignagesComponent } from './pages/temoignages/temoignages/temoignages.component';
+import { CollabsComponent } from './pages/temoignages/collabs/collabs.component';
+import { PartnersComponent } from './pages/temoignages/partners/partners.component';
+import { PrestationsComponent } from './pages/solutions/prestations/prestations.component';
 
 
 
@@ -33,7 +38,12 @@ import { RefCertifComponent } from './pages/entreprise/ref-certif/ref-certif.com
     ExpertiseComponent,
     TarifsComponent,
     PartenairesComponent,
-    RefCertifComponent
+    RefCertifComponent,
+    ClientsComponent,
+    TemoignagesComponent,
+    CollabsComponent,
+    PartnersComponent,
+    PrestationsComponent
   ],
   imports: [
     BrowserModule,

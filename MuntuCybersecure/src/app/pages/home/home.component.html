@@ -1,69 +1,83 @@
 <header class="header-style-1">
-    <div class="header-navbar ">
-        <div class="container">
-           <div class="text-center ">
-              <button class="btn-bordeaux" >
-                 Fr
-              </button>
-            </div>
-            <div class="d-flex align-items-center justify-content-between section-padding-top">
-                <div class="site-logo">
-                    <a href="home">
-                        <img src="../../../assets/images/logo (2).png" alt="" class="img-fluid" />
-                    </a>
-                </div>
+  <div class="header-navbar">
+    <div class="container">
 
-                <div class="offcanvas-icon d-block d-lg-none">
-                    <a href="#" class="nav-toggler"><i class="fal fa-bars"></i></a>
-                </div>
-                <nav class="site-navbar ms-auto">
+      <div class="text-center">
+        <button class="btn-bordeaux">Fr</button>
+      </div>
 
-                    <ul class="primary-menu">
-                      <li>
-                            <a class="contact-link" href="solutions">Nos solutions</a>
-                            <ul class="submenu">
-                <li><a class="contact-link" href="solutions">Prestations</a></li>
-                <li><a class="contact-link" href="expertise">Expertises spécifiques</a></li>
-                <li><a class="contact-link" href="tarifs">Tarifs</a></li>
-                <li><a class="contact-link" href="solutions">Diagnostic RGPD offert</a></li>
-              </ul>
-                        </li>
+      <div class="d-flex align-items-center justify-content-between section-padding-top">
 
-                        <li><a class="contact-link" href="about.html">L'entreprise</a>
-                        <ul class="submenu">
-                <li><a class="contact-link" href="qui-sommes-nous">Qui sommes-nous ?</a></li>
-                <li><a class="contact-link" href="nos-partenaires">Nos partenaires</a></li>
-                <li><a class="contact-link" href="ref&certif">Référencements</a></li>
-                <li><a class="contact-link" href="register">Actualités & presse</a></li>
-              </ul></li>
-
-
-                         <li>
-                            <a class="contact-link" href="index.html">Nos contenus</a>
-<ul class="submenu">
-                <li><a class="contact-link" href="login">Le blog</a></li>
-                <li><a class="contact-link" href="register">Les newsletters</a></li>
-              </ul>
-                        </li>
-
-                        <li>
-                            <a class="contact-link" href="offres">Nos offres</a>
-                        </li>
-
-                        <li>
-                            <a class="contact-link" href="blog.html">Témoignages</a>
-                        </li>
-                        <li>
-                            <a class="contact-link" href="contact">Contact</a>
-                        </li>
-                    </ul>
-
-                    <a href="#" class="nav-close"><i class="fal fa-times"></i></a>
-                </nav>
-            </div>
+        <div class="site-logo">
+          <a routerLink="/home">
+            <img src="../../../assets/images/logo (2).png" alt="" class="img-fluid" />
+          </a>
         </div>
+
+        <!-- Bouton hamburger -->
+        <div class="offcanvas-icon d-block d-lg-none">
+          <a (click)="toggleMenu()" class="nav-toggler">
+            <i class="fal fa-bars"></i>
+          </a>
+        </div>
+
+        <!-- MENU MOBILE + DESKTOP -->
+        <nav class="site-navbar ms-auto" [class.open]="isMenuOpen">
+
+          <ul class="primary-menu">
+            <li>
+              <a class="contact-link" routerLink="/solutions">Nos solutions</a>
+              <ul class="submenu">
+                <li><a class="contact-link" routerLink="/prestations">Prestations</a></li>
+                <li><a class="contact-link" routerLink="/expertise">Expertises spécifiques</a></li>
+                <li><a class="contact-link" routerLink="/tarifs">Tarifs</a></li>
+                <li><a class="contact-link" routerLink="/solutions">Diagnostic RGPD offert</a></li>
+              </ul>
+            </li>
+
+            <li>
+              <a class="contact-link" routerLink="/about">L'entreprise</a>
+              <ul class="submenu">
+                <li><a class="contact-link" routerLink="/qui-sommes-nous">Qui sommes-nous ?</a></li>
+                <li><a class="contact-link" routerLink="/nos-partenaires">Nos partenaires</a></li>
+                <li><a class="contact-link" routerLink="/ref&certif">Référencements</a></li>
+                <li><a class="contact-link" routerLink="/register">Actualités & presse</a></li>
+              </ul>
+            </li>
+
+            <li>
+              <a class="contact-link" routerLink="/blog">Nos contenus</a>
+              <ul class="submenu">
+                <li><a class="contact-link" routerLink="/login">Le blog</a></li>
+                <li><a class="contact-link" routerLink="/register">Les newsletters</a></li>
+              </ul>
+            </li>
+
+            <li><a class="contact-link" routerLink="/offres">Nos offres</a></li>
+
+            <li>
+              <a class="contact-link" routerLink="/temoignages">Témoignages</a>
+              <ul class="submenu">
+                <li><a class="contact-link" routerLink="/temoignagesClients">Témoignages clients</a></li>
+                <li><a class="contact-link" routerLink="/temoignagesCollaborateurs">TémoignagesCollaborateurs</a></li>
+                <li><a class="contact-link" routerLink="/temoignagesPartenaires">Témoignages partenaires</a></li>
+              </ul>
+            </li>
+
+            <li><a class="contact-link" routerLink="/contact">Contact</a></li>
+          </ul>
+
+          <!-- Icône fermer (mobile) -->
+          <a (click)="closeMenu()" class="nav-close">
+            <i class="fal fa-times"></i>
+          </a>
+
+        </nav>
+      </div>
     </div>
+  </div>
 </header>
+
 
 <!-- SECTION HERO -->
 <section class="hero-section">
@@ -85,7 +99,7 @@
 </div>
 
     <div class="text-center mt-5">
-      <button class="btn btn-bordeaux px-4 py-2">Découvrir nos offres</button>
+      <button routerLink="/solutions" class="btn btn-bordeaux px-4 py-2">Découvrir nos offres</button>
     </div>
 
   </div>
@@ -99,7 +113,10 @@
             <div class="col-xl-10">
                 <div class="heading text-center">
                     <h2 class="popular-courses-title">NOS PRESTATIONS</h2>
-                  <h5 style="padding-bottom: 40px;text-align: left;">Vos prestataires en <span style="color:#7b0f18 ;">cybersécurité</span> et en<span style="color:#7b0f18 ;">conformité au RGPD</span>   basés en <span style="color:#7b0f18 ;">France</span>.</h5>
+                  <h5 style="padding-bottom: 40px;text-align: left;">Vos prestataires en
+                    <span style="color:#7b0f18 ;">cybersécurité</span> et en
+                    <span style="color:#7b0f18 ;">conformité au RGPD</span>   basés en
+                    <span style="color:#7b0f18 ;">France</span>.</h5>
                 </div>
             </div>
         </div>
@@ -183,6 +200,7 @@
 </section>
 <!--  Course category End -->
 
+
 <section class=" section-padding-top">
     <div class="container">
         <div class="row justify-content-center">
@@ -193,31 +211,50 @@
                 </div>
             </div>
         </div>
-        <div class="row align-items-center">
-            <div class="col-lg-12 col-xl-12">
-                <div class="testimonials-slides owl-carousel owl-theme">
-                    <div class="testimonial-item">
-                       <div class="testimonial-inner">
-                           <div class="quote-icon"><i class="flaticon-left-quote"></i></div>
 
-                            <div class="testimonial-text mb-30">
-                                Cras vel purus fringilla, lobortis libero ut Proin a velit convallis, fermentum orci in, rutrum diam. Duis elementum odio a pharetra commodo.
-                            </div>
+        <div class="testimonial-wrapper">
 
-                            <div class="client-info d-flex align-items-center">
-                                <div class="client-img">
-                                    <img src="assets/images/clients/testimonial-avata-01.jpg" alt="" class="img-fluid">
-                                </div>
-                                <div class="testimonial-author">
-                                    <h4>Cory Zamora</h4>
-                                    <span class="meta">Marketing Specialist</span>
-                                </div>
-                            </div>
-                       </div>
-                    </div>
-                </div>
-            </div>
+    <!-- Flèche gauche -->
+    <div class="nav-arrow left-arrow" (click)="goPrev()">&#8249;</div>
+
+    <div class="testimonial-content-flex">
+
+        <!-- Photo -->
+        <div class="testimonial-photo">
+            <img [src]="testimonials[current].image" alt="">
         </div>
+
+        <!-- Texte -->
+        <div class="testimonial-text-block">
+            <h3>
+                <span class="name">{{ testimonials[current].name }}</span>,
+                {{ testimonials[current].role }}
+            </h3>
+
+            <h5 class="testimonial-text">
+                "{{ testimonials[current].text }}"
+            </h5>
+
+            <button class="testimonial-btn">Lire le témoignage</button>
+        </div>
+    </div>
+
+    <!-- Flèche droite -->
+    <div class="nav-arrow right-arrow" (click)="goNext()">&#8250;</div>
+
+    <!-- Points -->
+    <div class="testimonial-dots">
+        <span
+            class="dot"
+            *ngFor="let t of testimonials; let i = index"
+            [class.active]="i === current"
+            (click)="goToSlide(i)">
+        </span>
+    </div>
+
+</div>
+
+
     </div>
 </section>
 <!-- SECTION CONTENT BOX EN BAS DE PAGE -->
@@ -232,13 +269,13 @@
   <div class="colored-line me-3"></div>
 
   <p class="hero-subtext paragraph-text">
-    L'équipe de CyberSecura est composée d'experts en cybersécurité, en infrastructures réseaux
+    L'équipe de Muntu CyberSecure est composée d'experts en cybersécurité, en infrastructures réseaux
     et en conformité réglementaire, mais surtout de passionnés ! Découvrez qui nous sommes !
   </p>
 </div>
 
     <div class="text-center mt-5">
-      <button class="btn btn-bordeaux px-4 py-2">Découvrir</button>
+      <button routerLink="/qui-sommes-nous" class="btn btn-bordeaux px-4 py-2">Découvrir</button>
     </div>
 
   </div>

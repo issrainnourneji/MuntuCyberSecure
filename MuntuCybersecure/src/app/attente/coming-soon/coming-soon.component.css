@@ -98,7 +98,7 @@
 }
 
 .social-links a {
-  color: #333;
+  color: #292929;
   font-size: 1.5rem;
   transition: 0.3s ease;
 }
@@ -109,7 +109,7 @@
 }
 
 .contact-link {
-  color: #333; /* Blanc par défaut */
+  color: #292929; /* Blanc par défaut */
   text-decoration: none;
   cursor: pointer; /* Curseur main */
   transition: color 0.3s ease; /* Animation fluide */
@@ -121,7 +121,7 @@
 
 /* ========== ANIMATIONS PRO ========== */
 @keyframes brandGlow {
-  0% { filter: drop-shadow(0px 0px 0px #6d6566); }
+  0% { filter: drop-shadow(0px 0px 0px #333); }
   100% { filter: drop-shadow(0px 0px 10px #c41e37); }
 }
 
@@ -153,7 +153,7 @@
 }
 /* ===== FOOTER CONTACT — SANS RETOUR À LA LIGNE ===== */
 .footer-info {
-  margin-top: 83px;
+  margin-top: 85px;
   width: 100%;
   padding-top: 40px;
 }

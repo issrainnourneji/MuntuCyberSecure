@@ -194,3 +194,276 @@
   height: 100%;
   border: 0;
 }
+
+
+/* CONTAINER GLOBAL */
+.testimonial-wrapper {
+    position: relative;
+    width: 100%;
+    padding: 80px 0;
+    background: #f7f7f3;
+    text-align: center;
+}
+
+/* FLEX PRINCIPAL (photo + texte) */
+.testimonial-content-flex {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 70px;
+}
+
+/* PHOTO */
+.testimonial-photo img {
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+/* TEXTE */
+.testimonial-text-block {
+    max-width: 560px;
+    text-align: left;
+}
+
+.testimonial-text-block h3 {
+    font-size: 22px;
+    margin-bottom: 20px;
+    color: #7b0f18; /* vert identique */
+}
+
+.name {
+    font-weight: 600;
+}
+
+/* TEXTE DU TEMOIGNAGE */
+.testimonial-text {
+    font-size: 18px;
+    font-style: italic;
+    line-height: 1.7;
+    margin-bottom: 35px;
+}
+
+/* BOUTON */
+.testimonial-btn {
+    background: #7b0f18;
+    padding: 12px 28px;
+    border-radius: 10px;
+    color: white;
+    text-decoration: none;
+    font-size: 17px;
+    transition: 0.2s;
+    margin-left: 150px;
+}
+
+.testimonial-btn:hover {
+    opacity: 0.8;
+}
+
+/* FLECHES */
+.nav-arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 100px;
+    color: #7b0f18;
+    cursor: pointer;
+    user-select: none;
+}
+
+.left-arrow {
+    left: 25px;
+}
+
+.right-arrow {
+    right: 25px;
+}
+
+/* POINTS */
+.testimonial-dots {
+    margin-top: 40px;
+}
+
+.testimonial-dots .dot {
+    width: 10px;
+    height: 10px;
+    background: #333;
+    display: inline-block;
+    border-radius: 50%;
+    margin: 0 6px;
+    opacity: 0.4;
+}
+
+.testimonial-dots .dot.active {
+    opacity: 1;
+}
+
+/* =============================================================
+   📱 RESPONSIVE GLOBAL (max-width: 768px)
+   ============================================================= */
+@media (max-width: 768px) {
+
+/* =======================
+   HEADER & MENU MOBILE
+   ======================= */
+.header-navbar .container {
+    padding: 0 15px !important;
+}
+
+.site-logo img {
+    width: 130px !important;
+}
+
+/* bouton hamburger */
+.offcanvas-icon {
+    display: block !important;
+}
+
+/* Menu mobile (offcanvas) */
+nav.site-navbar {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 75%;
+    height: 100vh;
+    background: white;
+    padding: 45px 25px;
+    transition: right 0.35s ease;
+    z-index: 9999;
+    overflow-y: auto;
+}
+
+nav.site-navbar.open {
+    right: 0;
+}
+
+nav.site-navbar ul.primary-menu {
+    display: block;
+    margin-top: 25px;
+}
+
+nav.site-navbar ul.primary-menu li {
+    margin-bottom: 18px;
+}
+
+nav.site-navbar .submenu {
+    position: relative !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+    background: transparent !important;
+    box-shadow: none !important;
+    padding-left: 18px;
+    margin-top: 6px;
+}
+
+.nav-close {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    color: white !important;
+    font-size: 26px;
+}
+
+
+/* =======================
+   HERO SECTION
+   ======================= */
+.hero-section {
+    height: auto !important;
+    padding: 140px 20px 70px;
+}
+
+.content-box {
+    position: relative;
+    top: 0 !important;
+    left: 50%;
+    transform: translateX(-50%) !important;
+
+    width: 100%;
+    max-width: 92%;
+    padding: 30px 20px;
+}
+
+.hero-title {
+    font-size: 1.6rem !important;
+    line-height: 1.4;
+}
+
+.paragraph-text {
+    width: 100% !important;
+    text-align: center;
+}
+
+.colored-line {
+    margin: 15px auto 15px !important;
+}
+
+
+/* =======================
+   PRESTATIONS (cards)
+   ======================= */
+.sectionp {
+    padding: 80px 15px !important;
+}
+
+.card {
+    height: auto !important;
+    padding: 15px !important;
+}
+.popular-courses-title{
+  font-size: 30px;
+}
+
+/* =======================
+   TEMOIGNAGES
+   ======================= */
+.testimonial-content-flex {
+    flex-direction: column !important;
+    gap: 40px !important;
+    text-align: center !important;
+}
+
+.testimonial-photo img {
+    width: 170px !important;
+    height: 170px !important;
+}
+
+.testimonial-text-block {
+    text-align: center !important;
+    max-width: 75% !important;
+    margin: 0 auto;
+}
+
+.testimonial-btn {
+    margin-left: 0 !important;
+}
+
+.nav-arrow {
+    font-size: 55px !important;
+    top: 42% !important;
+}
+
+
+/* =======================
+   BOX BAS DE PAGE
+   ======================= */
+.content-section {
+    padding: 70px 20px !important;
+}
+
+.clone-box {
+    padding: 35px 20px !important;
+    max-width: 95% !important;
+}
+
+
+/* =======================
+   MAP
+   ======================= */
+.sectionpp {
+    padding-left: 20px !important;
+    padding-right: 20px !important;
+}
+
+}
