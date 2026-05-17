@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { TranslateService } from '@ngx-translate/core';
 
 
 interface Testimonial {
@@ -12,7 +13,21 @@ interface Testimonial {
   templateUrl: './home.component.html',
   styleUrl: './home.component.css',
 })
-export class HomeComponent {
+export class HomeComponent implements OnInit {
+  currentLang: 'fr' | 'en' = 'fr';
+
+  constructor(private translate: TranslateService) {}
+
+  ngOnInit() {
+    this.currentLang = (localStorage.getItem('lang') as 'fr' | 'en') || 'fr';
+    this.translate.use(this.currentLang);
+  }
+
+  changeLang(lang: 'fr' | 'en') {
+    this.currentLang = lang;
+    this.translate.use(lang);
+    localStorage.setItem('lang', lang);
+  }
 
 isMenuOpen = false;
 

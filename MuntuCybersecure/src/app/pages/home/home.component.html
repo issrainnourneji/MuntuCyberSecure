@@ -2,9 +2,24 @@
   <div class="header-navbar">
     <div class="container">
 
-      <div class="text-center">
-        <button class="btn-bordeaux">Fr</button>
-      </div>
+<div class="text-center">
+  <div class="dropdown">
+    <button
+      class="btn btn-bordeaux dropdown-toggle"
+      type="button"
+      id="langDropdown"
+      data-bs-toggle="dropdown"
+      aria-expanded="false">
+      {{ currentLang.toUpperCase() }}
+    </button>
+    <ul class="dropdown-menu" aria-labelledby="langDropdown">
+      <li><a class="dropdown-item" (click)="changeLang('fr')">FR</a></li>
+      <li><a class="dropdown-item" (click)="changeLang('en')">EN</a></li>
+    </ul>
+  </div>
+</div>
+
+
 
       <div class="d-flex align-items-center justify-content-between section-padding-top">
 
@@ -26,37 +41,37 @@
 
           <ul class="primary-menu">
             <li>
-              <a class="contact-link" routerLink="/solutions">Nos solutions</a>
+              <a class="contact-link" routerLink="/solutions">{{ 'MENU.SOLUTIONS' | translate }}</a>
               <ul class="submenu">
                 <li><a class="contact-link" routerLink="/prestations">Prestations</a></li>
                 <li><a class="contact-link" routerLink="/expertise">Expertises spécifiques</a></li>
                 <li><a class="contact-link" routerLink="/tarifs">Tarifs</a></li>
-                <li><a class="contact-link" routerLink="/solutions">Diagnostic RGPD offert</a></li>
+                <li><a class="contact-link" routerLink="/diagnostic">Diagnostic RGPD offert</a></li>
               </ul>
             </li>
 
             <li>
-              <a class="contact-link" routerLink="/about">L'entreprise</a>
+              <a class="contact-link" routerLink="/about">{{ 'MENU.ENTREPRISE' | translate }}</a>
               <ul class="submenu">
                 <li><a class="contact-link" routerLink="/qui-sommes-nous">Qui sommes-nous ?</a></li>
                 <li><a class="contact-link" routerLink="/nos-partenaires">Nos partenaires</a></li>
                 <li><a class="contact-link" routerLink="/ref&certif">Référencements</a></li>
-                <li><a class="contact-link" routerLink="/register">Actualités & presse</a></li>
+                <li><a class="contact-link" routerLink="/actualites">Actualités & presse</a></li>
               </ul>
             </li>
 
             <li>
-              <a class="contact-link" routerLink="/blog">Nos contenus</a>
+              <a class="contact-link" routerLink="/blog">{{ 'MENU.BLOG' | translate }}</a>
               <ul class="submenu">
-                <li><a class="contact-link" routerLink="/login">Le blog</a></li>
-                <li><a class="contact-link" routerLink="/register">Les newsletters</a></li>
+                <li><a class="contact-link" routerLink="/blog">Le blog</a></li>
+                <li><a class="contact-link" routerLink="/newsletters">Les newsletters</a></li>
               </ul>
             </li>
 
-            <li><a class="contact-link" routerLink="/offres">Nos offres</a></li>
+            <li><a class="contact-link" routerLink="/offres">{{ 'MENU.OFFERS' | translate }}</a></li>
 
             <li>
-              <a class="contact-link" routerLink="/temoignages">Témoignages</a>
+              <a class="contact-link" routerLink="/temoignages">{{ 'MENU.Témoignages' | translate }}</a>
               <ul class="submenu">
                 <li><a class="contact-link" routerLink="/temoignagesClients">Témoignages clients</a></li>
                 <li><a class="contact-link" routerLink="/temoignagesCollaborateurs">TémoignagesCollaborateurs</a></li>
@@ -64,7 +79,7 @@
               </ul>
             </li>
 
-            <li><a class="contact-link" routerLink="/contact">Contact</a></li>
+            <li><a class="contact-link" routerLink="/contact">{{ 'MENU.CONTACT' | translate }}</a></li>
           </ul>
 
           <!-- Icône fermer (mobile) -->

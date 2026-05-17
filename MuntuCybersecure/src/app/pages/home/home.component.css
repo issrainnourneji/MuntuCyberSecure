@@ -467,3 +467,17 @@ nav.site-navbar .submenu {
 }
 
 }
+.btn-bordeaux {
+  background-color: #7b0f18;
+  color: #fff;
+  border: none;
+}
+
+.btn-bordeaux:hover, .btn-bordeaux:focus {
+  background-color: #be323d;
+  color: #fff;
+}
+
+.dropdown-menu {
+  min-width: 80px;
+}

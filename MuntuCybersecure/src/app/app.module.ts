@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { RouterModule } from '@angular/router';
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AppComponent } from './app.component';
@@ -22,8 +22,19 @@ import { TemoignagesComponent } from './pages/temoignages/temoignages/temoignage
 import { CollabsComponent } from './pages/temoignages/collabs/collabs.component';
 import { PartnersComponent } from './pages/temoignages/partners/partners.component';
 import { PrestationsComponent } from './pages/solutions/prestations/prestations.component';
+import { DiagnosticComponent } from './pages/solutions/diagnostic/diagnostic.component';
+import { ActualitesComponent } from './pages/entreprise/actualites/actualites.component';
+import { NewsletterComponent } from './pages/contenus/newsletter/newsletter.component';
+import { BlogComponent } from './pages/contenus/blog/blog.component';
 
+// ngx-translate
+import { TranslateModule, TranslateLoader } from '@ngx-translate/core';
+import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 
+// Fonction loader : juste 1 argument
+export function HttpLoaderFactory(http: HttpClient) {
+  return new TranslateHttpLoader(http); // ✅ plus d'erreur
+}
 
 @NgModule({
   declarations: [
@@ -43,7 +54,11 @@ import { PrestationsComponent } from './pages/solutions/prestations/prestations.
     TemoignagesComponent,
     CollabsComponent,
     PartnersComponent,
-    PrestationsComponent
+    PrestationsComponent,
+    DiagnosticComponent,
+    ActualitesComponent,
+    NewsletterComponent,
+    BlogComponent
   ],
   imports: [
     BrowserModule,
@@ -51,7 +66,15 @@ import { PrestationsComponent } from './pages/solutions/prestations/prestations.
     FormsModule,
     ReactiveFormsModule,
     BrowserAnimationsModule,
-    AppRoutingModule
+    AppRoutingModule,
+    TranslateModule.forRoot({
+      defaultLanguage: 'fr', // langue initiale
+      loader: {
+        provide: TranslateLoader,
+        useFactory: HttpLoaderFactory,
+        deps: [HttpClient]
+      }
+    }),
   ],
   providers: [],
   bootstrap: [AppComponent]

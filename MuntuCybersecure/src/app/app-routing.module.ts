@@ -15,6 +15,10 @@ import { TemoignagesComponent } from './pages/temoignages/temoignages/temoignage
 import { CollabsComponent } from './pages/temoignages/collabs/collabs.component';
 import { PartnersComponent } from './pages/temoignages/partners/partners.component';
 import { PrestationsComponent } from './pages/solutions/prestations/prestations.component';
+import { DiagnosticComponent } from './pages/solutions/diagnostic/diagnostic.component';
+import { ActualitesComponent } from './pages/entreprise/actualites/actualites.component';
+import { NewsletterComponent } from './pages/contenus/newsletter/newsletter.component';
+import { BlogComponent } from './pages/contenus/blog/blog.component';
 
 const routes: Routes = [
   { path: "home", component: HomeComponent },
@@ -25,13 +29,17 @@ const routes: Routes = [
   {path: "prestations" , component : PrestationsComponent},
   {path: "expertise" , component : ExpertiseComponent},
   {path: "tarifs" , component : TarifsComponent},
+  {path: "diagnostic" , component : DiagnosticComponent},
   {path: "qui-sommes-nous" , component : PresentationComponent},
   {path: "nos-partenaires" , component : PartenairesComponent},
   {path: "ref&certif" , component : RefCertifComponent},
+  {path: "actualites" , component : ActualitesComponent},
   {path: "temoignages" , component : TemoignagesComponent},
   {path: "temoignagesClients" , component : ClientsComponent},
   {path: "temoignagesCollaborateurs" , component : CollabsComponent},
   {path: "temoignagesPartenaires" , component : PartnersComponent},
+  {path: "newsletters" , component : NewsletterComponent},
+  {path: "blog" , component : BlogComponent},
 
 
 
